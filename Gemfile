@@ -30,7 +30,7 @@ gem "slim"
 # all other gems
 gem "decent_decoration"
 gem "decent_exposure"
-gem "devise"
+gem "devise", "~> 4.4.0"
 gem "draper"
 gem "flamegraph"
 gem "google-analytics-rails"
@@ -41,11 +41,11 @@ gem "memory_profiler"
 gem "puma"
 gem "pundit"
 gem "rack-canonical-host"
-gem "rack-mini-profiler", require: false, git: "https://github.com/MiniProfiler/rack-mini-profiler.git"
 gem "responders"
 gem "rollbar"
 gem "seedbank"
 gem "stackprof"
+gem "dotenv-rails"
 
 group :staging, :production do
   gem "newrelic_rpm"
@@ -67,13 +67,13 @@ group :test do
 end
 
 group :development, :test do
+  gem "rack-mini-profiler", require: false
   gem "awesome_print"
   gem "brakeman", require: false
   gem "bullet"
   gem "bundler-audit", require: false
   gem "byebug"
   gem "coffeelint"
-  gem "dotenv-rails"
   gem "factory_girl_rails"
   gem "faker"
   gem "jasmine", "> 2.0"
